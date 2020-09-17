@@ -1,0 +1,18 @@
+html{
+    font-family: $font1;
+    font-size: $base_font_size;
+    font-weight: $font_weight_1;
+}
+
+.after-slider{
+    .info-box{
+       
+        height: 100%;
+    
+        @include media-max($md){
+            margin-bottom: 30px;
+            height: auto;
+            
+        }
+    }
+}

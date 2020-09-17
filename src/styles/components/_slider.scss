@@ -1,0 +1,92 @@
+$slider_dot_active_c: $red_color1;
+$slider_dot_inctive_c: rgba(0,0,0,.3);
+
+$slider_dot_size: 30px;
+$slider_dot_mobile_size: 20px;
+
+
+.slider{
+    margin-bottom: 0 !important;
+    .slick-track{
+        display: flex;
+        
+    }
+    .slick-slide{
+        padding-left: 10px;
+        padding-right: 10px;
+        height: inherit ;
+       
+        .info-box{
+            margin-bottom: 0;
+            height: 100%;
+            img{
+                display: inline-block;
+            }
+        }
+    }
+    .slick-arrow{
+        background: transparent;
+        height: 40px;
+
+        &.slick-prev{
+            left: -50px;
+            &::before{
+                content: url('../images/arrow_prev.png');
+                
+              
+            }
+        }
+        &.slick-next{
+            right: -50px;
+            &::before{
+                content: url('../images/arrow_next.png');
+              
+            }
+        }
+    }
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        // 60 px = padding od dolu sekcji
+        bottom: -$slider_dot_size /2 - 60px;
+        height:$slider_dot_size ;
+      
+        li{
+           @include size-box($slider_dot_size);
+            
+
+            &.slick-active{ 
+            
+                button{
+                    background-color: $slider_dot_active_c;
+                    &::before{
+                        color: $slider_dot_active_c;
+                    }
+                }
+ 
+            }
+            button{
+                width: inherit;
+                height: inherit;
+                padding: 0;
+                background-color: $slider_dot_inctive_c;
+                border-radius: 50%;
+                font-size: 0;;
+                &::before{
+                    content: none;
+                   
+                }
+            }
+        }
+
+        
+        @include media-max($md){
+                // 60 px = padding od dolu sekcji
+            bottom: -$slider_dot_mobile_size /2 - 60px;  
+            height:$slider_dot_mobile_size ;
+            li{
+                @include size-box($slider_dot_mobile_size);
+            }
+        }
+    }
+}

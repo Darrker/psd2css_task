@@ -1,0 +1,28 @@
+
+// colors
+$section_default_bg: $light_color1;
+$section_default_c: $dark_color2;
+
+$section_blue_bg: $blue_color1;
+$section_blue_c: $light_color1;
+$section_light_bg: $light_color2;
+$section_light_c: $dark_color2;
+
+.section{
+    background-color: $section_default_bg;
+    color: $section_default_c;
+    padding: 60px 0;
+
+    // modifiers
+    &--light{
+        background-color: $section_light_bg;
+        color: $section_light_c;
+        
+    }
+
+    &--blue{
+        background-color: $section_blue_bg;
+        color: $section_blue_c;
+    }
+    // end modifiers
+}

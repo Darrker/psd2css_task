@@ -1,0 +1,34 @@
+$top_bar_bg: $light_color1;
+
+.top-bar{
+    padding: 20px 0;
+    background-color: $top_bar_bg;
+
+    &__logo{
+        width: 160px;
+        height: auto;
+        
+    }
+
+    // modifiers
+
+    &--sticky{
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    // end modifiers
+
+    // media
+    @include media-max($md){
+        padding: 10px 0;
+
+        .top-bar__logo{
+            width: 120px;
+        }
+
+    }
+
+    // end media
+}

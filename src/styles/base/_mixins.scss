@@ -34,7 +34,7 @@
     font-weight: 900;
 }
 
-@mixin lineHeightCrop($line-height) {
+@mixin line-height-crop($line-height) {
     &::before {
         content: '';
         display: block;
